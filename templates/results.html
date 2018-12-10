@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sightengine demo - Python and Flask</title>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/app.css') }}">
+</head>
+
+<body>
+
+<form action="/">
+    <input type="submit" value="Go Back!" />
+</form>
+
+<form method="POST">
+	    <!-- Ambulance Slider -->   
+    <div class="col-md-4">
+        <h4>Background slider</h4>
+    </div>  
+    <div class="col-md-8">
+        <div class="""slidecontainer">
+                  <input type="range" min="0" max="255" value= "20" class="slider" name="background">
+                  <br>
+        </div>
+    </div> 
+
+        <div class="col-md-4">
+        <h4>Alpha slider</h4>
+    </div>  
+    <div class="col-md-8">
+        <div class="""slidecontainer">
+                  <input type="range" min="0" max="255" value="60" class="slider" name="alpha">
+                  <br>
+        </div>
+    </div> 
+
+        <div class="col-md-4">
+        <h4>Beta slider</h4>
+    </div>  
+    <div class="col-md-8">
+        <div class="""slidecontainer">
+                  <input type="range" min="0" max="255" value="0" class="slider" name="beta">
+                  <br>
+        </div>
+        <input type="submit" value="submit">
+    </div> 
+</form>
+	<img src="{{display_image}}" alt="Wrinkle Image">
+	<p> {{ message1 }} <br/> {{message2}}  <br/> {{ message3 }} <br/> {{message4}}</p>
+</body>
+</html>
